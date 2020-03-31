@@ -26,12 +26,14 @@ public class MainActivity extends AppCompatActivity {
                 builder.setTitle("Thông báo mới");
                 builder.setMessage("Bạn vừa nhận tin nhắn mới");
                 builder.setIcon(R.mipmap.ic_launcher);
+                builder.setCancelable(false);
 
                 //Button Xác nhận
                 builder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         Toast.makeText(MainActivity.this, "Có", Toast.LENGTH_SHORT).show();
+                        dialogInterface.dismiss();
                     }
                 });
                 //Button từ chối
